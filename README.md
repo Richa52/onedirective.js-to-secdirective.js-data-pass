@@ -1,16 +1,6 @@
 # onedirective.js-to-secdirective.js-data-pass
 
-onedirective.js (Which is send data to another directive in angular js)
-$rootScope inject to app controller.
 
-  scope.ChangeOrder = function (type, reverse) {
-               // debugger;
-                scope.sort = type;
-                scope.sortReverse = reverse;
-                console.log(scope.docketlist);
-                $rootScope.$broadcast('orderDate', { type: type, reverse: reverse });
-               
-            }
 secdirective.js 
 
       $rootScope.$on('orderDate', function (event, data) {
@@ -27,3 +17,15 @@ secdirective.js
                 }
             }
             
+onedirective.js (Which is send data to another directive in angular js)
+$rootScope inject to app controller.
+     
+  
+          
+        scope.ChangeOrder = function (type, reverse) {
+                scope.sort = type;
+                scope.sortReverse = reverse;
+                console.log(scope.docketlist);
+                $rootScope.$broadcast('orderDate', { type: type, reverse: reverse });
+               
+            }
