@@ -24,6 +24,5 @@ $rootScope inject to app controller.
           scope.ChangeOrder = function (type, reverse) {
                 scope.sort = type;
                 scope.sortReverse = reverse;
-                console.log(scope.docketlist);
                 $rootScope.$broadcast('orderDate', { type: type, reverse: reverse });
         }
